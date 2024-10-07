@@ -22,6 +22,15 @@
                     <label for="description">Descripción:</label>
                     <textarea id="descripcion" name="description" class="form-control mb-2">{{ task.description }}</textarea>
 
+                    <label for="capital">Ubicaci&oacute;n:</label>
+                    <select id="capital" name="capital" class="form-control mb-2">
+                        <option value="Bogotá" {% if tasks.ciudad == "Bogotá" %}selected{% endif %}>Bogotá</option>
+                        <option value="Medellín" {% if tasks.ciudad == "Medellín" %}selected{% endif %}>Medellín</option>
+                        <option value="Cali" {% if tasks.ciudad == "Cali" %}selected{% endif %}>Cali</option>
+                        <option value="Barranquilla" {% if tasks.ciudad == "Barranquilla" %}selected{% endif %}>Barranquilla</option>
+                        <option value="Cartagena" {% if tasks.ciudad == "Cartagena" %}selected{% endif %}>Cartagena</option>
+                    </select>
+
                     <label for="completed">Completada:</label>
                     <input type="checkbox" id="completed" name="completed" {% if task.completed %} checked {% endif %}>
 
